@@ -1,44 +1,34 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
+<html>
+<head lang="en">
     <meta charset="UTF-8">
-    <title>title</title>
+    <title>旋转木马轮播图</title>
+    <link rel="stylesheet" href="css/css.css"/>
+    <!--先引工具包-->
+    <script src="js/animate.js"></script>
+    <!--在引逻辑包-->
+    <script src="js/demo3.js"></script>
 </head>
 <body>
-  <h2>获取明星数据</h2>
-  <input type="button" value='获取JSON数据'>
+
+
+    <div class="wrap" id="wrap">
+       <div class="slide" id="slide">
+           <ul>
+               <li><a href="#"><img src="images/slidepic1.jpg" alt=""/></a></li>
+               <li><a href="#"><img src="images/slidepic2.jpg" alt=""/></a></li>
+               <li><a href="#"><img src="images/slidepic3.jpg" alt=""/></a></li>
+               <li><a href="#"><img src="images/slidepic4.jpg" alt=""/></a></li>
+               <li><a href="#"><img src="images/slidepic5.jpg" alt=""/></a></li>
+           </ul>
+           <div class="arrow" id="arrow">
+               <a href="javascript:;" class="prev"></a>
+               <a href="javascript:;" class="next"></a>
+           </div>
+
+       </div>
+    </div>
+
+
 </body>
 </html>
-<script>
-  // 点击获取数据
-  document.querySelector('input').onclick = function(){
-    //1.创建对象
-    var xhr = new XMLHttpRequest();
-    //2.设置请求行(get请求数据写在url后面)
-    xhr.open('post','backStar.php');
-    //3.设置请求头(get请求可以省略,post不发送数据也可以省略)
-    //3.5注册回调函数
-    xhr.onload = function(){
-      console.log(xhr.responseText);
-      var result = JSON.parse(xhr.responseText);
-      console.log(result);
-
-      // 拼接table
-      var html ='<table>';
-      for(var i =0;i<result.length;i++){
-        html+='<tr>';
-        html+='<td>'+result[i].name+'</td>';
-        html+='<td>'+result[i].skill+'</td>';
-        html+='</tr>';
-      }
-      html+='</table>';
-
-      console.log(html);
-
-      document.body.innerHTML = html;
-    }
-    //4.请求主体发送(get请求为空，或者写null，post请求数据写在这里，如果没有数据，直接为空或者写null)
-    xhr.send(null);
-  }
-
-</script>
