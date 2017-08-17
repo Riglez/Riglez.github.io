@@ -1,14 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
-    <title>index.html</title>
+    <title>title</title>
 </head>
-
 <body>
-    <h1>To Be Continue ...</h1>
+  <h2>获取明星数据</h2>
+  <input type="button" value='获取JSON数据'>
 </body>
-
 </html>
+<script>
+  // 点击获取数据
+  document.querySelector('input').onclick = function(){
+    //1.创建对象
+    var xhr = new XMLHttpRequest();
+    //2.设置请求行(get请求数据写在url后面)
+    xhr.open('post','backStar.php');
+    //3.设置请求头(get请求可以省略,post不发送数据也可以省略)
+    //3.5注册回调函数
+    xhr.onload = function(){
+      console.log(xhr.responseText);
+      var result = JSON.parse(xhr.responseText);
+      console.log(result);
+
+      // 拼接table
+      var html ='<table>';
+      for(var i =0;i<result.length;i++){
+        html+='<tr>';
+        html+='<td>'+result[i].name+'</td>';
+        html+='<td>'+result[i].skill+'</td>';
+        html+='</tr>';
+      }
+      html+='</table>';
+
+      console.log(html);
+
+      document.body.innerHTML = html;
+    }
+    //4.请求主体发送(get请求为空，或者写null，post请求数据写在这里，如果没有数据，直接为空或者写null)
+    xhr.send(null);
+  }
+
+</script>
