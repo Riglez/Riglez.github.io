@@ -5,6 +5,25 @@ function $(id){
     return document.getElementById(id);
 }
 
+//显示元素；
+function show(ele){
+    ele.style.display = "block";
+}
+//隐藏元素；
+function hide(ele){
+    ele.style.display = "none";
+}
+
+
+
+//页面被卷去的部分方法封装
+function scroll(){
+    return {
+        top: window.pageYOffset || document.documentElement.scrollTop,
+        left: window.pageXOffset || document.documentElement.scrollLeft
+    }
+}
+
 
 //缓动框架
 function animate(ele,json,fn){
