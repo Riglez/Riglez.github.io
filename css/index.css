@@ -86,3 +86,81 @@ body {
 body {
   background: #333333;
 }
+.view {
+  height: 100%;
+}
+.view main {
+  height: 100%;
+  /*导航*/
+  /*侧边菜单*/
+}
+.view main .article {
+  height: 100%;
+  background: #333333;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+}
+.view main .article .navbar {
+  color: white;
+  background-color: inherit;
+  border: none;
+  margin: 0;
+}
+.view main .article .navbar .container-fluid {
+  border-bottom: 1px solid #FAED26;
+}
+.view main .article .navbar .container-fluid .navbar-brand {
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  background: url("../images/logo.jpg");
+  border-radius: 50%;
+  display: block;
+}
+.view main .article .show {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  margin-top: 25px;
+  background: yellowgreen;
+}
+.view main .menu {
+  height: 100%;
+}
+.view main .menu .profile a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 20px auto;
+  background: url("../images/user-icon.jpg");
+  background-size: 50px 50px;
+  border: none;
+}
+.view main .menu .profile a:focus {
+  outline: none;
+}
+.view main .menu .list {
+  color: white;
+  font-size: 14px;
+}
+.view main .menu .list li {
+  height: 75px;
+}
+.view main .menu .list li a {
+  display: block;
+  line-height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+.view main .menu .list li a:hover {
+  text-decoration: none;
+}
+.view main .menu .list li a:focus {
+  background: aqua;
+  text-decoration: none;
+  color: white;
+}
