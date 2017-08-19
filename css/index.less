@@ -1,7 +1,22 @@
 @import "base.less";
 @color_body: #333333;
+@color-1: #2bc8ed;
+@color-2: #22b6e7;
+@color-3: #19a4e1;
+@color-4: #63d1c4;
+@color-5: #4fc1b0;
+@color-6: #3bb19c;
+@color-7: #f48f63;
+@color-8: #f2724f;
+@color-9: #ef553b;
+@color-10: #414a4e;
+@color-11: #74848b;
+@color-12: #a1aaae;
+@color-13: #d3d9dc;
+@color-14: #eceff1;
 body {
     background: @color_body;
+    color: white;
 }
 
 .view {
@@ -11,7 +26,6 @@ body {
         /*导航*/
         .article {
             height: 100%;
-            background: #333333;
             font-size: 18px;
             display: flex;
             flex-direction: column;
@@ -31,22 +45,20 @@ body {
                         display: block;
                     }
                 }
-            } 
-            .show{
+            }
+            .show {
                 width: 100%;
                 height: 100%;
-                flex:1;
+                flex: 1;
                 margin-top: 25px;
-                background: yellowgreen;
+                background: @color-12;
             }
         }
-
-
-
         /*侧边菜单*/
         .menu {
             height: 100%;
             .profile {
+                text-align: center;
                 a {
                     display: block;
                     width: 50px;
@@ -57,33 +69,36 @@ body {
                     background-size: 50px 50px;
                     border: none;
                 }
-                a:focus{
+                a:focus {
                     outline: none;
                 }
+                .user-icon {
+                    color: #FAED26;
+                    cursor: pointer;
+                }
             }
-
-            .list{
-                color:white;
+            .list {
+                color: white;
                 font-size: 14px;
-                li{
+                margin-top: 35px;
+                li {
                     height: 75px;
-                    a{
+                    a {
                         display: block;
                         line-height: 60px;
                         width: 60px;
                         border-radius: 50%;
                         margin: 0 auto;
                         text-align: center;
-                        &:hover{
+                        &:hover {
                             text-decoration: none;
                         }
-                        &:focus{
-                            background: aqua;
+                        &:focus {
+                            background: @color-8;
                             text-decoration: none;
-                            color:white;
+                            color: white;
                         }
                     }
-                    
                 }
             }
         }

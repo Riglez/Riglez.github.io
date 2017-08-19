@@ -85,6 +85,7 @@ body {
 }
 body {
   background: #333333;
+  color: white;
 }
 .view {
   height: 100%;
@@ -96,7 +97,6 @@ body {
 }
 .view main .article {
   height: 100%;
-  background: #333333;
   font-size: 18px;
   display: flex;
   flex-direction: column;
@@ -123,10 +123,13 @@ body {
   height: 100%;
   flex: 1;
   margin-top: 25px;
-  background: yellowgreen;
+  background: #a1aaae;
 }
 .view main .menu {
   height: 100%;
+}
+.view main .menu .profile {
+  text-align: center;
 }
 .view main .menu .profile a {
   display: block;
@@ -141,9 +144,14 @@ body {
 .view main .menu .profile a:focus {
   outline: none;
 }
+.view main .menu .profile .user-icon {
+  color: #FAED26;
+  cursor: pointer;
+}
 .view main .menu .list {
   color: white;
   font-size: 14px;
+  margin-top: 35px;
 }
 .view main .menu .list li {
   height: 75px;
@@ -160,7 +168,7 @@ body {
   text-decoration: none;
 }
 .view main .menu .list li a:focus {
-  background: aqua;
+  background: #f2724f;
   text-decoration: none;
   color: white;
 }
