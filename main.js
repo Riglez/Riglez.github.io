@@ -18,7 +18,7 @@ require.config({
     }
 })
 
-require(["jquery","acg/load","bootstrap"],function($,acgLoad){
+require(["jquery","acg/loadacg","bootstrap"],function($,acgLoad){
     // $(".list").on("click","li",function(){     失败不触发事件的代码,因为要控制的是a标签
     $(".list").on("click","a",function(){
         if($(this).hasClass("one")){
