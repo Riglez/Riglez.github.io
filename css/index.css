@@ -125,6 +125,18 @@ body {
   margin-top: 25px;
   background: #a1aaae;
 }
+.view main .article .show .container-fluid {
+  height: 100%;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+}
+.view main .article .show .container-fluid .rotate-box {
+  margin: 0 25px;
+  width: 45%;
+  height: 80%;
+  background: red;
+}
 .view main .menu {
   height: 100%;
 }
@@ -156,6 +168,12 @@ body {
 .view main .menu .list li {
   height: 75px;
 }
+.view main .menu .list li .active {
+  background: #f2724f;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
 .view main .menu .list li a {
   display: block;
   line-height: 60px;
@@ -163,12 +181,8 @@ body {
   border-radius: 50%;
   margin: 0 auto;
   text-align: center;
+  transition: all 1s linear;
 }
 .view main .menu .list li a:hover {
   text-decoration: none;
-}
-.view main .menu .list li a:focus {
-  background: #f2724f;
-  text-decoration: none;
-  color: white;
 }
