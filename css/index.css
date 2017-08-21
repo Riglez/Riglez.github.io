@@ -127,15 +127,22 @@ body {
 }
 .view main .article .show .container-fluid {
   height: 100%;
-  display: -webkit-box;
-  -webkit-box-align: center;
-  -webkit-box-pack: center;
 }
 .view main .article .show .container-fluid .rotate-box {
-  margin: 0 25px;
+  margin: 25px;
   width: 45%;
-  height: 80%;
-  background: red;
+  background: yellowgreen;
+  perspective: 1000px;
+}
+.view main .article .show .container-fluid .left-box {
+  width: 45%;
+  height: 85%;
+  position: relative;
+}
+.view main .article .show .container-fluid .left-box .face {
+  width: 100%;
+  height: 100%;
+  background: yellow;
 }
 .view main .menu {
   height: 100%;

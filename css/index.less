@@ -54,17 +54,22 @@ body {
                 background: @color-12;
                 .container-fluid{
                     height: 100%;
-                    display: -webkit-box;
-                    -webkit-box-align: center;
-                    -webkit-box-pack: center;
-                    // flex-direction: row;
-                    // align-items: space-around;
-                    // justify-content: space-around;
                     .rotate-box{
-                        margin: 0 25px;
+                        margin: 25px;
                         width: 45%;
-                        height: 80%;
-                        background: red;
+                        // height: 80%;
+                        background: yellowgreen;
+                        perspective: 1000px;
+                    }
+                    .left-box{
+                        width: 45%;
+                        height: 85%;
+                        position: relative;
+                        .face{
+                            width: 100%;
+                            height: 100%;
+                            background: yellow;
+                        }
                     }
                 }
             }
