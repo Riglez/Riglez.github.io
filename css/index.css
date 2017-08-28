@@ -1,5 +1,5 @@
-@import "media.less";
-@import "base.less";
+@import "media.css";
+@import "base.css";
 html,
 body {
   width: 100%;
