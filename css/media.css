@@ -1,26 +1,32 @@
 /* 担心有些ie浏览器 不识别 媒体查询 only   */
+@media only screen and (min-width: 1080px), only screen and (max-device-width: 1080px) {
+  html,
+  body {
+    font-size: 100px;
+  }
+}
 @media only screen and (max-width: 1080px), only screen and (max-device-width: 1080px) {
   html,
   body {
-    font-size: 168.75px;
+    font-size: 100px;
   }
 }
 @media only screen and (max-width: 960px), only screen and (max-device-width: 960px) {
   html,
   body {
-    font-size: 150px;
+    font-size: 100px;
   }
 }
 @media only screen and (max-width: 800px), only screen and (max-device-width: 800px) {
   html,
   body {
-    font-size: 125px;
+    font-size: 100px;
   }
 }
 @media only screen and (max-width: 720px), only screen and (max-device-width: 720px) {
   html,
   body {
-    font-size: 112.5px;
+    font-size: 100px;
   }
 }
 @media only screen and (max-width: 640px), only screen and (max-device-width: 640px) {

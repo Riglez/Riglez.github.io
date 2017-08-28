@@ -1,195 +1,142 @@
-body,
-ol,
-ul,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-th,
-td,
-dl,
-dd,
-form,
-fieldset,
-legend,
-input,
-textarea,
-select {
-  padding: 0;
-  margin: 0;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  /* 移动端 a标签 点击高亮 */
-  -webkit-tap-highlight-color: transparent;
-}
-ul {
-  list-style: none;
-}
-img {
-  width: 100%;
-  /* 解决图片默认的3像素  */
-  display: block;
-}
-input,
-fieldset,
-img,
-button {
-  border: none;
-  padding: 0;
-  margin: 0;
-  outline-style: none;
-}
-input {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-table {
-  border-collapse: collapse;
-}
-s,
-i,
-em {
-  font-style: normal;
-  text-decoration: none;
-}
-/* 清楚浮动 */
-.clearfix::after {
-  display: block;
-  content: "";
-  height: 0;
-  clear: both;
-}
-.clearfix {
-  *zoom: 1;
-}
-.fl {
-  float: left;
-}
-.fr {
-  float: right;
-}
+@import "media.less";
+@import "base.less";
 html,
 body {
   width: 100%;
   height: 100%;
-}
-body {
-  font-size: 12px;
-}
-body {
-  background: #333333;
-  color: white;
+  background: #cccccc;
+  overflow: hidden;
 }
 .view {
-  height: 100%;
-}
-.view main {
-  height: 100%;
-  /*导航*/
-  /*侧边菜单*/
-}
-.view main .article {
-  height: 100%;
-  font-size: 18px;
-  display: flex;
-  flex-direction: column;
-}
-.view main .article .navbar {
-  color: white;
-  background-color: inherit;
-  border: none;
-  margin: 0;
-}
-.view main .article .navbar .container-fluid {
-  border-bottom: 1px solid #FAED26;
-}
-.view main .article .navbar .container-fluid .navbar-brand {
-  height: 50px;
-  margin: 0;
-  padding: 0;
-  background: url("../images/logo.jpg");
-  border-radius: 50%;
-  display: block;
-}
-.view main .article .show {
   width: 100%;
   height: 100%;
-  flex: 1;
-  margin-top: 25px;
-  background: #a1aaae;
+  position: absolute;
+  color: #ffffff;
 }
-.view main .article .show .container-fluid {
+.wel {
+  width: 100%;
+  height: 100%;
+  background: #232323;
+}
+.wel::before {
+  content: "~\(≧▽≦)/~";
+  font: bold 0.5rem/1rem "simson";
+  width: 8rem;
+  height: 1rem;
+  text-align: center;
+  transform: translateX(-1200px);
+}
+.wel::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  transform: translateX(1500px);
+}
+.view.animation .wel::before {
+  /* transition: all 1s steps(3);   按步骤执行动画*/
+  transition: all 1s;
+  transform: translate(0);
+  margin: auto;
+  /*这种设置盒子的水平垂直居中时必须给盒子高度*/
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.view.animation .wel::after {
+  transition: all 1s 1.2s;
+  transform: translate(0);
+}
+.main {
+  width: 100%;
   height: 100%;
 }
-.view main .article .show .container-fluid .rotate-box {
-  margin: 25px;
-  width: 45%;
-  background: yellowgreen;
-  perspective: 1000px;
+.main nav {
+  height: .7rem;
+  background: #232323;
 }
-.view main .article .show .container-fluid .left-box {
-  width: 45%;
-  height: 85%;
+.main nav .logo {
+  text-align: center;
+}
+.main nav .logo a {
+  line-height: .7rem;
+}
+.main nav .menu {
+  font: 700 0.2rem/0.5rem "simson";
+}
+.main nav .menu ul > li {
+  float: left;
+  padding: .1rem 0;
+}
+.main nav .menu ul > li a {
+  padding: 0 .25rem;
+}
+.main nav .menu ul > li:hover {
+  background: #ccc;
+}
+.main main {
+  width: 100%;
+  height: 100%;
   position: relative;
+  overflow: hidden;
 }
-.view main .article .show .container-fluid .left-box .face {
+.main main .container {
   width: 100%;
   height: 100%;
-  background: yellow;
+  padding: 0;
+  position: absolute;
 }
-.view main .menu {
+.main main .container .con-item {
+  width: 100%;
   height: 100%;
 }
-.view main .menu .profile {
+.main main .container .con-item .theme {
+  width: 100%;
+  height: 100%;
+  background: url("../image/book.jpg") round;
+  position: absolute;
+}
+.main main .container .con-item .leader {
+  width: 5.2rem;
+  height: 3rem;
+  background: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  margin: 1.4rem;
+  padding-top: .3rem;
+}
+.main main .container .con-item .leader h3 {
+  text-indent: 1em;
+  line-height: .5rem;
+}
+.main main .container .con-item .leader p {
+  font: 700 0.18rem/0.24rem "simson";
+  text-indent: 2em;
+  margin: .25rem 0;
+}
+.main main .container .con-item:nth-child(2) {
   text-align: center;
 }
-.view main .menu .profile a {
-  display: block;
-  width: 50px;
-  height: 50px;
+.main main .container .con-item:nth-child(2) .theme {
+  background: url("../image/mic.jpg") round;
+}
+.main main .container .con-item:nth-child(3) .theme {
+  background: url("../image/cat.jpg") round;
+}
+.main main .sorter {
+  position: absolute;
+  top: 50%;
+  right: .3rem;
+  transform: translateY(-50%);
+}
+.main main .sorter li {
+  width: .20rem;
+  height: .20rem;
   border-radius: 50%;
-  margin: 20px auto;
-  background: url("../images/user-icon.jpg");
-  background-size: 50px 50px;
-  border: none;
-}
-.view main .menu .profile a:focus {
-  outline: none;
-}
-.view main .menu .profile .user-icon {
-  color: #FAED26;
-  cursor: pointer;
-}
-.view main .menu .list {
-  color: white;
-  font-size: 14px;
-  margin-top: 35px;
-}
-.view main .menu .list li {
-  height: 75px;
-}
-.view main .menu .list li .active {
-  background: #f2724f;
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-}
-.view main .menu .list li a {
-  display: block;
-  line-height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  margin: 0 auto;
-  text-align: center;
-  transition: all 1s linear;
-}
-.view main .menu .list li a:hover {
-  text-decoration: none;
+  background-color: yellowgreen;
+  margin: .2rem 0;
 }
