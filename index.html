@@ -33,14 +33,14 @@
                             <h1><a href="javascript:;">╮(╯_╰)╭</a></h1>
                         </div>
                     </div>
-                    <div class="col-xs-6">
+                    <div class="col-md-6 col-xs-hidden">
 
                         <div class="menu">
                             <ul>
                                 <li><a href="javascript:;">主页</a></li>
                                 <li><a href="javascript:;">书屋</a></li>
                                 <li><a href="javascript:;">音乐</a></li>
-                                <li><a href="javascript:;">猫</a></li>
+                                <li><a class="cat" href="javascript:;">猫</a></li>
                             </ul>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                         <div class="leader">
                             <h3>多丽丝·莱辛 《特别的猫》</h3>
                             <p>不管怎样，在那遥远的过往，曾有一个小女孩，为了一只猫咪顽强抗争到底，终于为自己赢得了一位日夜相伴的贴心伙伴，但到了最后，她终究还是失去了他。</p>
-                            <a href="javascript:;" class="btn btn-danger col-xs-2 col-xs-offset-9">Go></a>
+                            <a href="javascript:;" class="cat btn btn-danger col-xs-2 col-xs-offset-9">Go></a>
                         </div>
                     </div>
                 </div>
@@ -83,54 +83,11 @@
     </div>
 
 
-    <script src="./js/lib/jquery-1.12.4.js"></script>
+    <!-- <script src="./js/lib/jquery-1.12.4.js"></script>
     <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="./assets/Swiper-3.4.2/dist/js/swiper.min.js"></script>
-    <script>
-        window.onload = function () {
-            var viewDom = document.querySelector(".view");
-            viewDom.classList.add("animation")
-            //可以利用设置定时器的方式在动画执行完之后跳转到另一个页面
-            var flag = 0;
-            var timer = setInterval(function () {
-                $(".view").animate({ top: -($("body").height()) }, function () {
-                    $(this).css({ top: 0 });
-                    $(".wel").remove();
-                })
-                flag++;
-                flag && clearInterval(timer);
-            }, 3000)
-
-            var $Con = $(".container");
-            var d = 0;
-            var flag = true;
-            $Con.find(".con-item").each(function(){
-                $(document.createElement("li")).appendTo($(".sorter"));
-            })
-            window.onmousewheel = function (event) {
-                var height = $(".container").height();
-                if ($(event.srcElement).hasClass("theme") && flag) {
-                    flag = false;
-                    if (event.wheelDelta > 0) {
-                        d == 0 ? d = 0 : d++;
-                    }
-                    else {
-                        d == -2 ? d = -2 : d--;
-                    }
-                    $Con.stop().animate({ top: d * height }, function () {
-                        flag = true;
-                    })
-                }
-            }
-
-
-
-            //页面大小改变时让元素更改大小,适应屏幕的大小=>onresize或者媒体查询??
-            window.onresize = function () {
-                $Con.stop().animate({ top: -($Con.height()) }, 0)
-            }
-        }
-    </script>
+    <script src="./assets/Swiper-3.4.2/dist/js/swiper.min.js"></script> -->
+    <script src="./js/lib/require.js" data-main='main'></script>
+    <script src="./config.js"></script>
 
 
 </body>
